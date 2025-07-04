@@ -1,0 +1,238 @@
+/* Reset y tipografías */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #e0f7fa;
+  line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+  width: 95%;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.06);
+  padding: 2rem;
+  backdrop-filter: blur(6px);
+}
+
+/* Encabezado de página */
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 1rem;
+}
+.page-header a {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #00f7ff;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+.page-header a:hover {
+  color: #ffffff;
+}
+.page-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff;
+}
+
+/* Tarjetas */
+.card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.05);
+}
+.card--padded {
+  padding: 2rem;
+}
+
+/* Tabla */
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.1);
+}
+
+.table thead {
+  background-color: #00f7ff;
+  color: #000;
+}
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #f0f0f0;
+}
+.table tbody tr:hover {
+  background-color: rgba(0, 247, 255, 0.15);
+}
+.table-striped tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+.table-striped tbody tr:nth-child(odd) {
+  background: rgba(0, 247, 255, 0.04);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 0.25rem;
+  border: none;
+}
+
+.btn-primary {
+  background: #00f7ff;
+  color: #000;
+}
+.btn-primary:hover {
+  background: #00cdd7;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #444;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #333;
+}
+
+.btn-warning {
+  background: #ffc107;
+  color: #000;
+}
+.btn-warning:hover {
+  background: #e0a800;
+}
+
+.btn-danger {
+  background: #ff4c4c;
+  color: #fff;
+}
+.btn-danger:hover {
+  background: #d43f3f;
+}
+
+.btn-success {
+  background: #28a745;
+  color: #fff;
+}
+.btn-success:hover {
+  background: #218838;
+}
+
+/* Formularios */
+.form-label {
+  font-weight: 500;
+  color: #c5e8ff;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.form-control {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #1f2a38;
+  color: #fff;
+  transition: 0.3s;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00f7ff;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* Utilidades de espacio */
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.text-center { text-align: center; }
+
+/* Alertas */
+.alert-danger {
+  background-color: #ff4c4c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+/* Imagen miniatura */
+.thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,255,213,0.2);
+}
+
+/* Responsive tabla */
+@media screen and (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: rgba(20, 30, 48, 0.85);
+  }
+
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    width: 45%;
+    text-align: left;
+    font-weight: bold;
+    color: #00f7ff;
+  }
+}
